@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Client Registeration </title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+
+        <link rel="stylesheet" href="fonts/icomoon/style.css"/>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/magnific-popup.css"/>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
+        <link rel="stylesheet" href="css/animate.css"/>
+
+
+
+
+
+        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"/>
+
+        <link rel="stylesheet" href="css/aos.css"/>
+
+        <link rel="stylesheet" href="css/style.css"/>
+    </h:head>
+
+
+    <h:body>
+
+        <div class="site-wrap">
+            <p:growl/>
+            <div class="site-navbar-wrap js-site-navbar " style="background: black !important;" >
+                <div class="container">
+                    <div class="site-navbar bg-light">
+                        <div class="py-1">
+                            <div class="row align-items-center">
+                                <div class="col-2">
+                                    <h2 class="mb-0 site-logo"><a href="index.html">BK Tech</a></h2>
+                                </div>
+                                <div class="col-10">
+                                    <nav class="site-navigation text-right" role="navigation">
+                                        <div class="container">
+
+                                            <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                                            <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                                <li class="active">
+                                                    <a href="index.xhtml">Home</a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="registerclient.xhtml">Customer Registration</a>
+                                                </li>
+
+                                                <li><a href="login.xhtml">Login</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-section site-section-sm">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 col-lg-8 mb-5">
+
+
+
+                            <h:form  class="p-5 bg-white">
+
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="font-weight-bold" for="fullname">Full Name</label>
+                                        <h:inputText  id="fullname" value="#{loginAgainController.comp.fullNames}" class="form-control" pt:placeholder="Full Name" required="true" requiredMessage="provide your full names" />
+                                        <h:message for="fullname"/>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12 mb-3 mb-md-0">
+                                        <label class="font-weight-bold" for="phone">Phone</label>
+                                        <h:inputText id="phone" value="#{loginAgainController.comp.phoneNumber}" class="form-control" pt:placeholder="Phone #" required="true" requiredMessage="provide your phone"/>
+                                        <h:message for="phone"/>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="font-weight-bold" for="email">Email</label>
+                                        <h:inputText  id="email" value="#{loginAgainController.user.username}" class="form-control" pt:placeholder="Email Address ex:you@example.com" required="true" requiredMessage="email needed"/>
+                                        <h:message for="email"/>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="font-weight-bold" for="email">Password</label>
+                                        <h:inputSecret id="password" value="#{loginAgainController.user.password}" class="form-control" pt:placeholder="****************" required="true" requiredMessage="password"/>
+                                        <h:message for="password"/>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="font-weight-bold" for="email">confirm your Password</label>
+                                        <h:inputSecret  id="passow" value="#{loginAgainController.secondPassword}" class="form-control" pt:placeholder="*******" rendered="true" requiredMessage="please confirm your password"/>
+                                        <h:message for="passow"/>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <h:commandButton type="submit" action="#{loginAgainController.regiterCompany()}" value="Register now" class="btn btn-primary pill px-4 py-2"/>
+                                    </div>
+                                </div>
+
+
+                            </h:form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/aos.js"></script>
+
+
+        <script src="js/mediaelement-and-player.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+
+
+    </h:body>
+</html>
+

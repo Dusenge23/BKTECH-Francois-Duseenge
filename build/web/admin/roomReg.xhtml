@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>admin Panel</title>
+        <link rel="styleSheet" href="cssb/bootstrap/css/bootstrap.css"></link>
+        <link rel="styleSheet" href="cssb/font-awesome-4.7.0/css/font-awesome.css"></link>
+        <script src="cssb/bootstrap/js/bootstrap.js"></script>
+        <link rel="styleSheet" href="css/mystyle.css"></link>
+    </h:head>
+    <p:growl/>
+    <h:body>
+
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+        <div class="test">
+
+            <div class="col-lg-12">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-envelope" aria-hidden="true"></i> Product Registration</h3>
+                    </div>
+                    <div class="panel-body" style="overflow-x: hidden;overflow-y: visible;">
+                        <p:messages globalOnly="true"/>
+                        <h:form  class="p-5 bg-white" enctype="multipart/form-data">
+<!--                            <div class="row form-group">
+                                <div class="col-md-12 mb-3 mb-md-0">
+                                    <label class="font-weight-bold"  for="fullname">product name</label>
+                                    <h:selectOneMenu class="form-control" value="#{loginAgainController.room.roomCategory}">
+                                        <f:selectItem itemLabel="car" itemValue="Standard Room"/>
+                                        <f:selectItem itemLabel="computer" itemValue="Office Room" />
+                                        <f:selectItem itemLabel="Meeting Room" itemValue="Meeting Room"/>
+                                    </h:selectOneMenu>
+                                    <h:message for="fullname" class="text text-danger"/>
+                                </div>
+                            </div>-->
+
+                            <div class="row form-group">
+                                <div class="col-md-12 mb-3 mb-md-0">
+                                    <label class="font-weight-bold" for="phone">Product number</label>
+                                    <h:inputText id="roomNumber" value="#{loginAgainController.room.roomNumber}" class="form-control" pt:placeholder="" required="true" requiredMessage="Flow your phone"/>
+                                    <h:message for="roomNumber"  class="text text-danger"/>
+                                </div>
+                            </div>
+                            
+                            <div class="row form-group">
+                                <div class="col-md-12 mb-3 mb-md-0">
+                                    <label class="font-weight-bold" for="phone">manufacturing date</label>
+                                    <h:inputText id="phone" value="#{loginAgainController.room.floor}" class="form-control" pt:placeholder="" required="true" requiredMessage="Flow your phone"/>
+                                    <h:message for="phone"  class="text text-danger"/>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="font-weight-bold" for="email">Price</label>
+                                    <h:inputText  id="email" value="#{loginAgainController.room.price}" class="form-control" pt:placeholder="" required="true" requiredMessage="Price needed"/>
+                                    <h:message for="price" class="text text-danger"/>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="font-weight-bold" for="message">Description</label> 
+                                    <h:inputTextarea  id="messages" value="#{loginAgainController.room.description}" cols="30" rows="5" class="form-control" pt:placeholder="decription of product" required="true" requiredMessage="provide description"></h:inputTextarea>
+                                    <h:message for="messages" class="text text-danger"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3">Product Image</label>
+                                <div class="col-md-12">
+                                    <p:fileUpload   id="transcript"  fileUploadListener="#{loginAgainController.Upload}" mode="advanced" dragDropSupport="false"
+                                                    sizeLimit="1000000000000000" fileLimit="5" invalidFileMessage="Invalid Image Type must be pdf file"  allowTypes="/(\.|\/)(png|jp?g|gif)$/" />
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <h:commandButton type="submit" action="#{loginAgainController.chooseAction()}" value="#{loginAgainController.roomStatus}" class="btn btn-primary pill px-4 py-2"/>
+                                </div>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

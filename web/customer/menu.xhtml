@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+    <h:head>
+        <title>Customer Page</title>
+        <link rel="styleSheet" href="cssb/bootstrap/css/bootstrap.css"></link>
+        <link rel="styleSheet" href="cssb/font-awesome-4.7.0/css/font-awesome.css"></link>
+        <link rel="styleSheet" href="css/mystyle.css"></link>
+        <style>
+            .badge{
+                background:#17a0d7;
+            }
+            body{
+                background:#fbfbfb;
+            }
+            .navs{
+                background: white;
+                border:1px solid #ddd;
+            }
+            .navbar-default{
+                background: #f23a2e !important;
+                border-radius: 0px !important;
+                border: none !important;
+            }
+            a{
+                color: white !important;
+            }
+            .navbar-text{
+                color: white !important;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div>
+            <div class="header">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Kigali Heights Complex</a>
+                    </div>
+                    <div>
+                        <p class="navbar-text pull-right">Signed in as #{loginAgainController.loggedInUser.username}</p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="left-menu">
+            <div class="menus">
+                <ul>
+                    <li class="top"><a href="index.xhtml"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+                    <li>
+                        <h:form>
+                            <h:commandLink action="#{loginAgainController.logout()}">
+                                <i class="fa fa-power-off"></i> Logout
+                            </h:commandLink>
+                        </h:form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/jquery.js"/>
+        <script>
+            $(function () {
+                $('.dropdown').click(function () {
+                    $(this).find('.dropdownmes').toggle('slow');
+                    //$('.dropdownmes').toggle('slow');
+                });
+            });
+        </script>
+    </h:body>
+</html>

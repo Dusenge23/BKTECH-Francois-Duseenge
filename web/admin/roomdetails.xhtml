@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>admin Panel</title>
+        <link rel="styleSheet" href="cssb/bootstrap/css/bootstrap.css"></link>
+        <link rel="styleSheet" href="cssb/font-awesome-4.7.0/css/font-awesome.css"></link>
+        <script src="cssb/bootstrap/js/bootstrap.js"></script>
+        <link rel="styleSheet" href="css/mystyle.css"></link>
+    </h:head>
+    <h:body>
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+        <div class="test">
+
+            <div class="col-lg-12">
+                <p:messages/>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-envelope" aria-hidden="true"></i> All product</h3>
+                    </div>
+                    <div class="panel-body" style="overflow-x: hidden;overflow-y: visible;">
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr class="headings">
+                                        <th class="column-title">#</th>
+<!--                                        <th class="column-title">Room Category</th>-->
+                                        <th class="column-title">Manufacture Date</th>
+                                        <th class="column-title">price</th>
+                                        <th class="column-title">Description</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach items="#{loginAgainController.nrooms}" var="item" varStatus="items">
+                                        <tr>
+                                            <td>#{items.index + 1}</td>
+                                            
+                                            <td>#{item.floor}</td>
+                                            <td>#{item.price}</td>
+                                            <td>#{item.description}</td>
+                                            
+                                            <td>
+                                                <h:form>
+                                                   
+                                                    <h:commandButton class="btn btn-default" value="Edit" action="#{loginAgainController.initRoomz(item)}">
+                                                    </h:commandButton>
+                                                </h:form>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
+

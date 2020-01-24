@@ -1,0 +1,203 @@
+body{
+    background:#ededed;
+}
+.imageSlider{
+    width: 100%;
+    height: 500px;
+    background:url("../images/1.jpg") no-repeat;
+    background-size: cover;
+}
+.contain{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background:white;
+}
+.header{
+    padding: 5px;
+    padding-left: 5px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.content{
+    
+    padding-top: 5px;
+    border-left: 1px solid #ddd;
+    min-height: 230px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    height: auto;
+    max-height: 330px;
+}
+.img{
+    width: 210px;
+}
+.each{
+    box-shadow: 1px .5px 1px 1px #ddd;
+    margin-bottom: 10px;
+}
+.header-img{
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    height: 158px;
+}
+.eachcontent{
+    padding: 5px;
+}
+.footer{
+    background: #393838;
+    color: white;    
+
+}
+.footerText{
+    text-align: center;
+    background: #2a2a2a;
+    padding: 8px;
+}
+.footerList li{
+    list-style: none;
+    font-size: 12px;
+}
+.footerList li a{
+    color:white;
+    font-size: 12px;
+}
+.footerList li a:hover{
+    text-decoration: none;
+    color: #0cc0de;
+
+}
+.loginContent{
+    width: 400px;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 15%;
+    background: white;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+input[type="text"],input[type="password"],select{
+    background: white;
+    border: 1px solid #6c6c6cb3;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 28px;
+    box-shadow: none !important;
+}
+#userinput{
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 8px;
+    color: #6c6c6cb3;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    border: 1px solid black;
+}
+.forget{
+    float:right;
+    font-size: 12px;
+}
+.loginForm{
+    padding: 10px;
+}
+.headerLogin{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.btn-transparent{
+    padding: 13px;
+    color: white;
+    font-weight: bold;
+    background: #0cc0de;
+    border: 2px solid #0cc0de;
+    border-radius: 4px;
+}
+.btn-transparent:hover{
+    opacity: .9;
+    transition: .1s;
+    text-decoration: none;
+    color: #0cc0de;
+    background: white;
+}
+.line{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.myLabel{
+    color: black;
+    font-weight: normal;
+}
+.icons{
+    position: absolute;
+    right: 0px;
+    margin-right: 30px;
+    margin-top: -40px;
+    font-size: 20px;
+
+}
+.chat{
+    background: white;
+    width: 300px;
+    bottom: 0px;
+    position: fixed;
+    right: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    box-shadow: 1px 1px 2px 2px #ddd;
+    z-index: 1000;
+}
+.helpheader{
+    padding: 8px 0px 0px 8px;
+    border-bottom: 1px solid #ddd;
+    background: #0cc0de;
+    cursor: pointer;
+}
+.chatContent{
+    padding: 8px;
+}
+.chatContent{
+    display: none;
+}
+.messages{
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    max-height: 150px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+.rightmessage{
+    width: 100%;
+    background: #f8f8f8;
+    text-align: right;
+    border: 1px solid #ddd;
+    padding: 3px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.messages > div{
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.overlaz{
+    position: absolute;
+    height: 500px;
+    background: black;
+    width: 100%;
+    opacity: .8;
+}
+.searchicon{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+}

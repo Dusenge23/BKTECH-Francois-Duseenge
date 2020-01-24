@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>admin Panel</title>
+        <link rel="styleSheet" href="cssb/bootstrap/css/bootstrap.css"></link>
+        <link rel="styleSheet" href="cssb/font-awesome-4.7.0/css/font-awesome.css"></link>
+        <script src="cssb/bootstrap/js/bootstrap.js"></script>
+        <link rel="styleSheet" href="css/mystyle.css"></link>
+    </h:head>
+    <h:body>
+        <ui:insert>
+            <ui:include src="menu.xhtml"/>
+        </ui:insert>
+        <div class="test">
+
+            <div class="col-lg-12">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Your Room</h3>
+                    </div>
+                    <div class="panel-body" style="max-height: 280px;overflow-x: hidden;overflow-y: visible;">
+                        <table class="table">
+                            <thead>
+                                <th>#</th>
+                                <th>Room Number</th>
+                                <th>Floor</th>
+                                <th>Price</th>
+                                <th>Starting from </th>
+                                <th>Ending At</th>
+                                <th>Paid Amount</th>
+                                <th>Status</th>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="#{loginAgainController.customerPendingRoom}" varStatus="indexes" var="items">
+                                    <tr>
+                                        <td>${indexes.index + 1}</td>
+                                        <td>#{items.rooms.roomNumber}</td>
+                                        <td>#{items.rooms.floor}</td>
+                                        <td>
+                                            <h:outputText value="#{items.rooms.price}">
+                                                <f:convertNumber pattern="###,###,###"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            <h:outputText value="#{items.startingDate}">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            <h:outputText value="#{items.endingDate}">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            <h:outputText value="#{loginAgainController.convertIntoBooking(items.startingDate,items.endingDate,items.rooms.price)}">
+                                                <f:convertNumber pattern="###,###,###"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            #{items.rooms.status}
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Not paid Room</h3>
+                    </div>
+                    <div class="panel-body" style="max-height: 280px;overflow-x: hidden;overflow-y: visible;">
+                        <table class="table">
+                            <thead>
+                                <th>#</th>
+                                <th>Room Number</th>
+                                <th>Floor</th>
+                                <th>Price</th>
+                                <th>Started from </th>
+                                <th>Ended At</th>
+                                <th>Customer Name</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="#{loginAgainController.notPaidRoom}" varStatus="indexes" var="items">
+                                    <tr>
+                                        <td>${indexes.index + 1}</td>
+                                        <td>#{items.rooms.roomNumber}</td>
+                                        <td>#{items.rooms.floor}</td>
+                                        <td>
+                                            <h:outputText value="#{items.rooms.price}">
+                                                <f:convertNumber pattern="###,###,###"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            <h:outputText value="#{items.startingDate}">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            <h:outputText value="#{items.endingDate}">
+                                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                                            </h:outputText>
+                                        </td>
+                                        <td>
+                                            #{items.client.fullNames}
+                                        </td>
+                                        <td>
+                                            #{items.rooms.status}
+                                        </td>
+                                        <td>
+                                            <h:form>
+                                                <h:commandButton class="btn btn-default" action="#{loginAgainController.updateRooms(items.rooms)}" value="Set Visible"/>
+                                            </h:form>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </h:body>
+</html>
+
