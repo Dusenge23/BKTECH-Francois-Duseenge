@@ -3,29 +3,38 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/RoomDao.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/SessionManager.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IloginUsers.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/User.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/customer/menu.xhtml</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/successfull.xhtml</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/controller/LoginAgainController.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/controller/Test.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/customer/index.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IRooms.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IClient.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/index.xhtml</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/AbstractDao.java</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/images/img_5.jpg</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/Client.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/roomReg.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IUser.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/menu.xhtml</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/index.xhtml</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/login.xhtml</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/roomdetails.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dofilter/LoginFilter.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/IRootDao.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/hibernate.cfg.xml</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/controller/FileUpload.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/registerclient.xhtml</file>
-            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/Rooms.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/clientList.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/impl/RoomsImpl.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/RoomDao.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IloginUsers.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/RoomImage.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/User.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/customer/menu.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/controller/Test.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/customer/index.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/generic/AbstractDao.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/Client.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/index.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/impl/LoginImpl.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/web/admin/roomdetails.xhtml</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/intfc/IRoomImages.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/domain/Rooms.java</file>
+            <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/impl/UserImpl.java</file>
             <file>file:/C:/Users/USER/Desktop/prject/FinalProject/src/java/dao/impl/RoomImageImpl.java</file>
         </group>
     </open-files>
